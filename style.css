@@ -4,7 +4,7 @@
     grid-template-rows:repeat(9, 1fr) ;
     gap: 10px;
     border-style:dashed;
-    background-color: rgb(4, 4, 81);
+    background-image: url(https://cdn.discordapp.com/attachments/1556635901524975678/1562139517211906118/terrain.png?ex%3D6ad9900c%26is%3D6ad83e8c%26hm%3Df1b80fbbe568b1caab6da3ee3490d383b31fb0c9c89e078dda1c401843f1257b%26);
     padding: 9px;
     padding-bottom: 0px!important;
     width: 60vw;
@@ -46,64 +46,72 @@
 
 .terrain> div:nth-child(39) {
     grid-area: DC1;
-    background-color: rgb(3, 3, 84) !important;
-    border: 3px dashed rgb(68, 130, 245) !important;
+    background-color: rgb(3, 3, 84) ;
+    border: 3px dashed rgb(68, 130, 245) ;
     color: rgb(68, 130, 245);
 }
 .terrain > div:nth-child(63) {
     grid-area: DC2;
-    background-color: rgb(3, 3, 84) !important;
-    border: 3px dashed rgb(68, 130, 245) !important;
+    background-color: rgb(3, 3, 84) ;
+    border: 3px dashed rgb(68, 130, 245) ;
     color: rgb(68, 130, 245);
 }
 .terrain > div:nth-child(88) {
     grid-area: DD;
-    background-color: rgb(3, 3, 84) !important;
-    border: 3px dashed rgb(68, 130, 245) !important;
+    background-color: rgb(3, 3, 84) ;
+    border: 3px dashed rgb(68, 130, 245) ;
     color: rgb(68, 130, 245);
 }
 .terrain > div:nth-child(20) {
     grid-area: MG;
-    background-color: rgb(1, 45, 1) !important;
-    border: 3px dashed rgb(110, 247, 117) !important;
+    background-color: rgb(1, 45, 1) ;
+    border: 3px dashed rgb(110, 247, 117) ;
     color: rgb(110, 247, 117);
 }
 .terrain > div:nth-child(43) {
     grid-area: MC1;
-    background-color: rgb(1, 45, 1) !important;
-    border: 3px dashed rgb(110, 247, 117) !important;
+    background-color: rgb(1, 45, 1) ;
+    border: 3px dashed rgb(110, 247, 117) ;
     color: rgb(110, 247, 117);
 }
 
 .terrain> div:nth-child(67) {
     grid-area: MC2;
-    background-color: rgb(1, 45, 1) !important;
-    border: 3px dashed rgb(110, 247, 117) !important;
+    background-color: rgb(1, 45, 1) ;
+    border: 3px dashed rgb(110, 247, 117) ;
     color: rgb(110, 247, 117);
 }
 .terrain > div:nth-child(92) {
     grid-area: MD;
-    background-color: rgb(1, 45, 1) !important;
-    border: 3px dashed rgb(110, 247, 117) !important;
+    background-color: rgb(1, 45, 1) ;
+    border: 3px dashed rgb(110, 247, 117) ;
     color: rgb(110, 247, 117);
 }
 
 .terrain> div:nth-child(35) {
     grid-area: BU1;
-    background-color: rgb(63, 0, 0) !important;
-    border: 3px dashed rgb(255, 134, 134) !important;
+    background-color: rgb(63, 0, 0) ;
+    border: 3px dashed rgb(255, 134, 134) ;
     color: rgb(255, 134, 134);
+
 }
 .terrain > div:nth-child(83) {
     grid-area: BU2;
-    background-color: rgb(63, 0, 0) !important;
-    border: 3px dashed rgb(255, 134, 134) !important;
+    background-color: rgb(63, 0, 0) ;
+    border: 3px dashed rgb(255, 134, 134) ;
     color: rgb(255, 134, 134);
 }
 
 .terrain > div:nth-child(37) {
     grid-area: GB;
-    background-color: rgb(62, 62, 1) !important;
-    border: 3px dashed rgb(248, 248, 145) !important;
+    background-color: rgb(62, 62, 1) ;
+    border: 3px dashed rgb(248, 248, 145) ;
+}
+#post{
+    display: grid;
+    grid-template-areas: "GD DF"
+    "ML AT";
+    gap: 12px;
+
 }
 

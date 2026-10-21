@@ -6,6 +6,7 @@
         <title>Tachkila</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="index.js" defer></script>
     </head>
     <body>
         <header class="bg-blue-950/90  flex display: flex; gap-84 place-items-center h-16">
@@ -32,12 +33,46 @@
         <main class="flex ">
             <aside class="flex flex-col bg-blue-950/90 w-1/4 h-svh p-4 gap-4 border">
                 <button class="text-white bg-green-500 h-10 w-64 border rounded-[1vw]">+ Ajouter un joueur</button>
-                <div class="flex gap-24 text-white">
+                <div class="flex gap-24 text-white font-900">
                     <p>Effectif</p>
                     <div class="flex border  rounded-[8px] h-6 w-24 place-items-center p-2">
                         <p>0 joueur(s)</p>
                     </div>
                 </div>
+                <form class="border rounded-[12px] bg-bleu-700/90 flex flex-col gap-12 w-64 h-100 p-4">
+                    <div class="flex gap-20 text-white font-bold ">
+                        <p>Ajouter un joueur</p>
+                        <button>x</button>
+                    </div>
+
+                    <div class="flex flex-col ">
+                        <label for="Nom" class="text-white font-bold">Nom complet</label>
+                        <input class="bg-blue-900/60 border text-[12px] text-blue-100/50 rounded-[3px] w-56 " type="text" id="Nom" value="EX-Badr Banoune">
+                    </div>
+                 
+                    <div id="post" class="text-white ">
+                        <button class="GD border text-white text-[12px] rounded-[3px] bg-blue-900/60 flex w-26 gap-4 place-items-center">
+                            <p>Gardien</p>
+                            <div class="border border-indigo-600 rounded-[10vw] w-2 h-2 bg-yellow-500"></div>
+                        </button>
+                        <button class="DF border rounded-[3px] text-[12px] bg-blue-900/60 flex w-26 gap-4 place-items-center">
+                            <p>Défenseur</p>
+                            <div class="border border-indigo-600 rounded-[10vw] w-2 h-2 bg-blue-500"></div>
+                        </button>
+                        <button class="ML border rounded-[3px] text-[12px] bg-blue-900/60 flex w-26 gap-4 place-items-center">
+                            <p>Milieu</p>
+                            <div class="border border-indigo-600  rounded-[10vw] w-2 h-2 bg-green-500"></div>
+                        </button>
+                        <button class="AT border rounded-[3px] text-[12px] bg-blue-900/60 w-26 flex gap-4 place-items-center">
+                            <p>Attaquant</p>
+                            <div class="border border-indigo-600 rounded-[10vw] w-2 h-2 bg-red-500"></div>
+                        </button>
+                    </div>
+                    <div class="flex flex-col ">
+                        <label for="Nom" class="text-white font-bold">Numéro(1 à 99)</label>
+                        <input class="bg-blue-900/60 border text-[12px] text-blue-100/50 rounded-[3px] w-56 " type="text" id="Nom" value="4">
+                    </div>
+                </form>
             </aside>
             <section class="flex place-items-center justify-center bg-blue-950 w-full ">
               <div class="terrain ">
