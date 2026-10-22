@@ -4,9 +4,12 @@
     grid-template-rows:repeat(9, 1fr) ;
     gap: 10px;
     border-style:dashed;
-    background-image: url(https://cdn.discordapp.com/attachments/1556635901524975678/1562139517211906118/terrain.png?ex%3D6ad9900c%26is%3D6ad83e8c%26hm%3Df1b80fbbe568b1caab6da3ee3490d383b31fb0c9c89e078dda1c401843f1257b%26);
+    background-image: url(img/terrain-football-vert-vecteur-terrain-football-gridiron_1284-41290.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:700px ;
     padding: 9px;
-    padding-bottom: 0px!important;
+    padding-bottom: 0px;
     width: 60vw;
     height: 81vh;
     grid-template-areas: 
@@ -21,11 +24,14 @@
         ". . . . . . . . . . . .";
     
 }
+.joueur{
+    display:none;
+}
 
 .box{
     border-style: none;
     border-radius: 4px;
-    background-color: rgba(70, 71, 94, 0.4);
+   
 }
 .terrain div:nth-child(16){
     grid-area: DG;
@@ -113,5 +119,10 @@
     "ML AT";
     gap: 12px;
 
+}
+.afficherForme{
+    visibility: visible;
+    left: 40%;
+    transform:(-50%, -50%)scale(1) ;
 }
 
