@@ -26,13 +26,27 @@ const input=document.querySelector('#postechoisie')
 const listj=[]
 modul.addEventListener('submit', (event) => {
     event.preventDefault();
-    
+    const POSTES = [
+    { value: '',      label: 'Sur le banc' },
+    { value: 'GB',    label: 'GB - Gardien' },
+    { value: 'DG',    label: 'DG - Défenseur gauche' },
+    { value: 'DC1',   label: 'DC - Défenseur central 1' },
+    { value: 'DC2',   label: 'DC - Défenseur central 2' },
+    { value: 'DD',    label: 'DD - Défenseur droit' },
+    { value: 'MG',    label: 'MG - Milieu gauche' },
+    { value: 'MC1',   label: 'MC - Milieu central 1' },
+    { value: 'MC2',   label: 'MC - Milieu central 2' },
+    { value: 'MD',    label: 'MD - Milieu droit' },
+    { value: 'AT1',   label: 'BU - Buteur 1' },
+    { value: 'AT2',   label: 'BU - Buteur 2' }
+    ];
     const jou = {
         nom: nom.value,
         num: num.value,
         poste:input.value, 
         butt:'x',  
-        mod:'mod'
+        mod:'mod',
+        placement: ''
     };
 
 
@@ -54,6 +68,14 @@ modul.addEventListener('submit', (event) => {
     postej.textContent=element.poste
     const parent=document.createElement('div')
     parent.append(postej,nome)
+    const select=document.createElement('select')
+    select.classList = "bg-slate-800 text-white text-sm rounded p-1 w-full mt-2";
+    POSTES.forEach(pos=>{
+        const option=document.createElement('option')
+        option.setAttribute('value',pos.value)
+        option.textContent=pos.label
+        select.append(option)
+    })
     const modifier=document.createElement('button')
     modifier.textContent=element.mod
     modifier.addEventListener('click', ()=>{
@@ -66,9 +88,10 @@ modul.addEventListener('submit', (event) => {
         listj.splice(index,1) 
         console.log(listj)
     })
+    
     const info=document.createElement('div')
     info.classList="text-white font-meduim "
-    info.append(cercle,parent,icone,modifier)
+    info.append(cercle,parent,icone,modifier,select)
     list1.append(info)
     icone.addEventListener('click', ()=>{
         info.remove()
@@ -76,7 +99,7 @@ modul.addEventListener('submit', (event) => {
     })
    })
      modul.reset();
-    modul.classList.remove('afficherForme');
+    modul.classList.remove('afficherForme'); 
 
 });
 
