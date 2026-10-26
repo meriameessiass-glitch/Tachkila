@@ -32,7 +32,7 @@
         </header>
         <main class="flex ">
             <aside class="flex flex-col bg-blue-950/90 w-1/4 h-svh p-4 gap-4 border">
-                <button class="text-white bg-green-500 h-10 w-64 border rounded-[1vw]" id="boutton">+ Ajouter un joueur</button>
+                <button type="button" class="text-white bg-green-500 h-10 w-64 border rounded-[1vw]" id="boutton">+ Ajouter un joueur</button>
                 <div class="flex gap-24 text-white font-900">
                     <p>Effectif</p>
                     <div class="flex border  rounded-[8px] h-6 w-24 place-items-center p-2">
@@ -156,18 +156,19 @@
               <form class="flex flex-center gap-8  flex-col items-center bg-blue-300 pl-6 pt-6 pr-6 pb-6 text-white h-100 w-70 absolute z-50 rounded-xl" id="form"  hidden>
                 <div class="flex flex-center gap-10 ">
                     <h1 class="font-bold text-[20px] text-green-500">Ajouter un joueur</h1>
-                     <button class="text-white/80" id="annuler">x</button>
+                     <button type="button" class="text-white/80" id="annuler">x</button>
                 </div>
                 <div class="flex flex-col font-medium">
                     <label for="nom" >Nom Complet:</label>
                     <input class="border-solide bg-blue-950 rounded-sm" type="text" value="" id="nom">
                 </div>
-                <div class="grid grid-rows-2 w-50 grid-cols-2 gap-2 text-[12px]">
-                    <button type="button" class=" flex pl-2 gap-2 flex-center items-center  border-none text-white rounded-xl bg-blue-950 w-24 h-8">Gardieny<div class="border-none rounded-full  bg-yellow-500 w-2 h-2"></div></button>
-                    <button type="button" class="flex pl-1 rounded-xl flex-center items-center gap-2 bg-blue-950 text-white  w-24 h-8">Défenseur<div class="border-none rounded-full bg-blue-500 w-2 h-2"></div></button>
-                     <button type="button" class="flex pl-2 rounded-xl flex-center items-center gap-2 bg-blue-950 text-white w-24 h-8">Milieu<div class="border-none rounded-full bg-green-500 w-2 h-2"></div></button>
-                    <button type="button" class="flex pl-1 rounded-xl flex-center items-center gap-2 bg-blue-950 text-white w-24 h-8">Attaquant<div class="border-none rounded-full bg-red-500 w-2 h-2"></div></button>
+                <div class="grid grid-rows-2 w-50 grid-cols-2 gap-2 text-[12px]" id="post">
+                    <button type="button" class=" flex pl-2 gap-2 flex-center items-center  border-none text-white rounded-xl bg-blue-950 w-24 h-8" data-value="Gardien">Gardien<div class="border-none rounded-full  bg-yellow-500 w-2 h-2"></div></button>
+                    <button type="button" class="flex pl-1 rounded-xl flex-center items-center gap-2 bg-blue-950 text-white  w-24 h-8" data-value="Défenseur">Défenseur<div class="border-none rounded-full bg-blue-500 w-2 h-2"></div></button>
+                     <button type="button" class="flex pl-2 rounded-xl flex-center items-center gap-2 bg-blue-950 text-white w-24 h-8" data-value="Milieu">Milieu<div class="border-none rounded-full bg-green-500 w-2 h-2"></div></button>
+                    <button type="button" class="flex pl-1 rounded-xl flex-center items-center gap-2 bg-blue-950 text-white w-24 h-8" data-value="Attaquant">Attaquant<div class="border-none rounded-full bg-red-500 w-2 h-2"></div></button>
                 </div>
+                <input type="hidden" name="choix" id="postechoisie" value="">
                 <div class="flex flex-col font-medium">
                     <label for="number">Nombre (de 1à99):</label>
                     <input class="border-solide bg-blue-950 rounded-sm" type="text" id="number" value="">

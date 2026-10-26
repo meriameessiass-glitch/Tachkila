@@ -122,7 +122,13 @@
 }
 .afficherForme{
     visibility: visible;
-    left: 40%;
+    left: 30%;
     transform:(-50%, -50%)scale(1) ;
+}
+.active{
+    background-color: rgb(143, 249, 37);
+}
+#espjoueur{
+
 }
 

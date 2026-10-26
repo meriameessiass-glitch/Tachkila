@@ -12,55 +12,75 @@ ajouter.addEventListener('click', ()=> {
     modul.classList.add('afficherForme')
 })
 annuler.addEventListener('click', ()=> {
+    modul.hidden=true
     modul.classList.remove('afficherForme')
 })
+const poste=document.querySelectorAll('#post button')
+const input=document.querySelector('#postechoisie')
+   poste.forEach(button =>
+    button.addEventListener('click', function(){
+        button.classList.add('active')
+        input.value = button.getAttribute('data-value');
+        }));
+
 const listj=[]
 modul.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    c
-
+    
     const jou = {
         nom: nom.value,
         num: num.value,
+        poste:input.value, 
+        butt:'x',  
+        mod:'mod'
     };
 
+
     listj.push(jou);
-
-    const parent = document.createElement("div");
-    parent.classList.add(
-        "flex", "bg-slate-800", "p-4",
-        "rounded-xl", "border", "border-slate-700", "gap-3"
-    );
-
-    const para = document.createElement("p");
-    para.classList.add(
-        "w-9", "h-9", "rounded-full",
-        "border-2", "border-orange-500",
-        "flex", "justify-center", "items-center"
-    );
-
-    const span = document.createElement("span");
-    span.textContent = jou.num;
-    para.append(span);
-
-    const divchild = document.createElement("div");
-
-    const titre = document.createElement("h1");
-    titre.classList.add("font-bold", "text-white");
-    titre.textContent = jou.nom;
-
-    const parachild = document.createElement("p");
+    list1.innerHTML=''
     
-    parachild.classList.add("text-sm", "text-orange-400");
-
-    divchild.append(titre, parachild);
-    parent.append(para, divchild);
-    list1.append(parent);
-
+   listj.forEach((element,index)=>{
+    const icone=document.createElement('button')
+    icone.textContent=element.butt
+    icone.classList="text-red-500 "
+    const cercle=document.createElement('div')
+    const number=document.createElement('p')
+    number.textContent=element.num
+    cercle.classList="border-solide rounded-full  h-6 w-6 flex items-center justify-center bg-red-500/40 "
+    cercle.append(number)
+    const nome=document.createElement('p')
+    nome.textContent=element.nom
+    const postej=document.createElement('p')
+    postej.textContent=element.poste
+    const parent=document.createElement('div')
+    parent.append(postej,nome)
+    const modifier=document.createElement('button')
+    modifier.textContent=element.mod
+    modifier.addEventListener('click', ()=>{
+        nom.value=element.nom
+        num.value=element.num
+        input.value=element.poste
+        modul.hidden=false
+        modul.classList.add('afficherForme')
+        info.remove()
+        listj.splice(index,1) 
+        console.log(listj)
+    })
+    const info=document.createElement('div')
+    info.classList="text-white font-meduim "
+    info.append(cercle,parent,icone,modifier)
+    list1.append(info)
+    icone.addEventListener('click', ()=>{
+        info.remove()
+        listj.splice(index,1)
+    })
+   })
      modul.reset();
     modul.classList.remove('afficherForme');
+
 });
+
+
 annulerJ.addEventListener('click', (event) => {
     event.preventDefault();
 
