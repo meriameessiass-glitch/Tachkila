@@ -161,9 +161,10 @@
                 <div class="flex flex-col font-medium">
                     <label for="nom" >Nom Complet:</label>
                     <input class="border-solide bg-blue-950 rounded-sm" type="text" value="" id="nom">
+                    <p class="text-red-500 text-[10px]" hidden id="mess">Vous devez entrer un nom correct</p>
                 </div>
                 <div class="grid grid-rows-2 w-50 grid-cols-2 gap-2 text-[12px]" id="post">
-                    <button type="button" class=" flex pl-2 gap-2 flex-center items-center  border-none text-white rounded-xl bg-blue-950 w-24 h-8" data-value="Gardien">Gardien<div class="border-none rounded-full  bg-yellow-500 w-2 h-2"></div></button>
+                    <button type="button" class=" flex pl-2 gap-2 flex-center items-center  border-none text-white rounded-xl bg-blue-950 w-24 h-8" data-value="Gardient">Gardien<div class="border-none rounded-full  bg-yellow-500 w-2 h-2"></div></button>
                     <button type="button" class="flex pl-1 rounded-xl flex-center items-center gap-2 bg-blue-950 text-white  w-24 h-8" data-value="Défenseur">Défenseur<div class="border-none rounded-full bg-blue-500 w-2 h-2"></div></button>
                      <button type="button" class="flex pl-2 rounded-xl flex-center items-center gap-2 bg-blue-950 text-white w-24 h-8" data-value="Milieu">Milieu<div class="border-none rounded-full bg-green-500 w-2 h-2"></div></button>
                     <button type="button" class="flex pl-1 rounded-xl flex-center items-center gap-2 bg-blue-950 text-white w-24 h-8" data-value="Attaquant">Attaquant<div class="border-none rounded-full bg-red-500 w-2 h-2"></div></button>
@@ -172,6 +173,7 @@
                 <div class="flex flex-col font-medium">
                     <label for="number">Nombre (de 1à99):</label>
                     <input class="border-solide bg-blue-950 rounded-sm" type="text" id="number" value="">
+                    <p class="text-red-500 text-[10px]" hidden id="messN">Le numéro doit être entre 1 et 99t</p>
                 </div>
                 <div class="flex gap-6">
                     <button  class="bg-green-500 border-solide rounded-xl w-24" id="ajouter">Ajouter</button>

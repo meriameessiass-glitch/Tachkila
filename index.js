@@ -1,3 +1,4 @@
+const localS ="sauve-joueurs"
 const modul=document.querySelector("#form")
 const ajouter=document.querySelector("#boutton")
 const annuler=document.querySelector("#annuler")
@@ -42,8 +43,23 @@ const POSTES = [
     { value: 'MD',    label: 'MD - Milieu droit' },
     { value: 'AT1',   label: 'BU - Buteur 1' },
     { value: 'AT2',   label: 'BU - Buteur 2' }
-    ];
+    ]
+
 const listj=[]
+try{
+    listj=JSON.parse(
+        localStorage.getItem(localS)
+    ) || [];
+}catch(error){
+    listj=[]
+}
+
+function sauveJoueurs() {
+    localStorage.setItem(
+        localS,
+        JSON.stringify(listj)
+    )
+}
 const cases = {}
 POSTES.forEach(p => {
     if (!p.value) return
@@ -104,11 +120,13 @@ modul.addEventListener('submit', (event) => {
     const regexNom = /^[a-zA-ZÀ-ÿ]+( [a-zA-ZÀ-ÿ]+)*$/
     const regexNum = /^([1-9]|[1-9][0-9])$/
     if (!regexNom.test(nom.value.trim())) {
-        alert('Vous devez entrer un nom correct')
+        const message=document.querySelector('#mess')
+        message.hidden=false
         return
     }
     if (!regexNum.test(num.value.trim())) {
-        alert('Le numéro doit être entre 1 et 99')
+        const message=document.querySelector('#messN')
+        message.hidden=false
         return
     }
     const jou = {
@@ -210,3 +228,4 @@ annulerJ.addEventListener('click', (event) => {
     modul.hidden = true;
     modul.classList.remove('afficherForme');
 });
+
