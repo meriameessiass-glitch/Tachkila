@@ -3,4 +3,4 @@
 https://meriameessiass.atlassian.net/jira/software/projects/TAC/list?jql=project+%3D+TAC+ORDER+BY+cf%5B10019%5D+ASC&atlOrigin=eyJpIjoiZjI4MDEwYWRiNWU1NDliNTlkMjgwNWQ2YmVjNmYwZjEiLCJwIjoiaiJ9
 lien de canva
 https://canva.link/al424u2or6n7l6l
-"C:\Users\safiy\Downloads\Tachkila – Présentation du projet.pptx"
+C:\Users\safiy\Downloads\Tachkila – Présentation du projet.pptx
